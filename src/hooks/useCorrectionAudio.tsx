@@ -12,16 +12,6 @@ const useCorrectAudio = () => {
     const [page, setPage] = useState('');
     const { state, dispatch } = useContext(AppStateContext);
 
-    // const analyzeTranscript = (transcript: string) => {
-    //     // Example function to demonstrate post-processing
-    //     // This could be a place to implement a basic mapping or analysis,
-    //     // such as searching for specific phonetic patterns or sounds in the text.
-    //     console.log("Original Transcript: ", transcript);
-
-    //     // Simple example: Extract vowels from the transcript
-    //     const vowels = transcript.match(/[aeiou]/gi) || [];
-    //     console.log("Extracted Vowels: ", vowels.join(''));
-    // };
 
     const correctAudio = useCallback((pageId: string, audioBlobUrl: string) => {
         setPage(pageId)
