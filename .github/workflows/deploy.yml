@@ -5,6 +5,10 @@ on:
     branches: [main]  # or your default branch
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pages: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
