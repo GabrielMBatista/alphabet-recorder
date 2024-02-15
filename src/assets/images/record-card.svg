@@ -1,0 +1,13 @@
+<svg viewBox="76.291 106.015 309.976 206.192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="231.155" y1="106.553" x2="231.155" y2="311.951" id="gradient-0">
+      <stop offset="0" style="stop-color: rgb(0% 0% 0%)"></stop>
+      <stop offset="1" style="stop-color: rgb(0% 0% 0%)"></stop>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="231.155" y1="106.553" x2="231.155" y2="311.951" id="gradient-1" gradientTransform="matrix(-0.999971, -0.007635, 0.006134, -0.803533, 447.789485, 384.82804)">
+      <stop offset="0" style="stop-color: rgb(37, 152, 171);"></stop>
+      <stop offset="1" style="stop-color: rgb(45, 128, 156);"></stop>
+    </linearGradient>
+  </defs>
+  <rect x="76.372" y="106.553" width="309.565" height="205.398" style="stroke: url(#gradient-0); paint-order: fill; fill: url(#gradient-1); stroke-opacity: 0;" rx="14.671" ry="14.671"></rect>
+</svg>

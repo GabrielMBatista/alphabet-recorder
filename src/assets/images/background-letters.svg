@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="106.398 152.855 389.866 327.644" width="389.4734" height="328.8221" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="meuGradiente" gradientTransform="matrix(0.222589, -0.867907, 0.836812, 0.212566, 0.455542, 0.79559)">
+      <stop offset="0" stop-color="#6a7981"/>
+      <stop offset="1" stop-color="#499fbe"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#meuGradiente)" transform="matrix(0.987688, -0.156435, 0.156435, 0.987688, 5.049617, 4.753775)" style="transform-origin: 309.877px 310.948px;">
+    <path d="M 516.304 178.319 L 463.096 502.277 L 231.371 465.807 L 215.363 449.213 L 206.425 439.792 L 197.482 430.369 L 188.541 420.946 L 179.599 411.526 L 170.654 402.104 L 161.714 392.682 L 152.771 383.261 L 143.918 374.39 L 129.68 359.929 L 120.649 351.057 C 110.165 343.513 115.814 332.873 115.814 332.873 L 123.137 311.254 L 128.075 296.125 L 133.013 280.991 L 137.951 265.861 L 142.891 250.73 L 147.825 235.598 L 152.768 220.466 L 157.701 205.337 L 162.639 190.204 L 167.578 175.074 L 172.513 159.943 L 177.454 144.81 L 184.387 124.743" style="vector-effect: non-scaling-stroke; stroke-miterlimit: 1; stroke-width: 4px; paint-order: stroke; stroke-dashoffset: 2px;"/>
+    <g transform="matrix(1.083901, 0.095359, 0.166918, 1.144992, -46.964119, 1.900082)" style="transform-origin: 309.877px 310.948px;">
+      <g>
+        <g>
+          <path d="M 263.423 147.736 L 568.584 169.03 L 474.278 463.778 L 259.362 448.269 C 259.362 448.269 205.838 389.958 171.214 355.934 C 163.562 349.939 169.479 340.448 169.479 340.448 L 263.281 148.053" style="vector-effect: non-scaling-stroke; stroke-miterlimit: 1; stroke-width: 4px; paint-order: stroke; fill: rgba(129, 129, 129, 0); transform-box: fill-box; transform-origin: 50% 50%; stroke: rgb(255, 255, 255);"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
