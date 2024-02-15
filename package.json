@@ -2,7 +2,6 @@
   "name": "alphabet-recorder",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://gabrielmbatista.github.io/alphabet-recorder",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -24,12 +23,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "dev": "npm run build && npm run start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build"
-    },
+    "eject": "react-scripts eject"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -54,7 +53,6 @@
     "@types/react-speech-recognition": "^3.9.5",
     "@types/recorder-js": "^1.0.4",
     "autoprefixer": "^10.4.17",
-    "gh-pages": "^6.1.1",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1"
   }
