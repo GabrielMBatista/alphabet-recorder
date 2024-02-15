@@ -73,7 +73,7 @@ const About: React.FC = () => {
             <div className="grid grid-cols-2 gap-2 w-full h-full max-w-1xl">
               {abbreviationLines.map((abbr) => (
                 <div key={abbr.name} className="relative flex items-center justify-center cursor-pointer font-bold text-xl">
-                  <CustomAudioPlayer letter={abbr.name} audioSrc={abbr.audioSrc} onAudioEnd={() => { /* Função a ser chamada quando o áudio terminar */ }}>
+                  <CustomAudioPlayer letter={abbr.name} audioSrc={abbr.audioSrc} onAudioEnd={() => { /* Função  */ }}>
                     <button
                       className="flex items-center justify-center cursor-pointer font-bold text-xl mx-4 mb-2 p-4"
                       title={`Click to play ${abbr.name}`}
