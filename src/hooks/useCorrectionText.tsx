@@ -17,7 +17,6 @@ const useCorrectText = () => {
     };
 
     const checkAnswers = useCallback(() => {
-        console.log('state.userEntries', state.userEntries)
         let correctCount = 0;
         state.userEntries.forEach((entry: { userEntry: string; abbreviation: string | number; }) => {
             if (entry.userEntry.trim().toUpperCase() === (correctAnswers[entry.abbreviation]?.toUpperCase() || '')) {
@@ -28,7 +27,6 @@ const useCorrectText = () => {
         // Calcula a pontuação com base no número de respostas corretas
         const totalEntries = Object.keys(correctAnswers).length;
         const accuracy = correctCount / totalEntries;
-        console.log('accuracy', accuracy)
         let points = 0;
         if (accuracy === 1) { // 100% correto
             points = 5;

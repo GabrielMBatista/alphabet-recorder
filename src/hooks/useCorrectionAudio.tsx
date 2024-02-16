@@ -2,7 +2,6 @@ import { useCallback, useContext, useEffect, useState } from 'react';
 import { useSpeechRecognition } from 'react-speech-recognition';
 import { AppStateContext } from '../contexts/AppStateContext';
 import postProcessTranscript from './postProcessTranscript';
-// import postProcessTranscript from './postProcessTranscript';
 
 // const ALPHABET_SIZE = 26;
 const ALPHABET_SIZE = 1;
@@ -16,13 +15,9 @@ const useCorrectAudio = () => {
     const correctAudio = useCallback((pageId: string, audioBlobUrl: string) => {
         setPage(pageId)
         if (!transcript) return;
-        // analyzeTranscript(transcript)
         const processedTranscript = postProcessTranscript(transcript);
-        console.log('transcript', transcript)
-        console.log('processedTranscript', processedTranscript)
         const currentLetter = state.currentLetter.toUpperCase();
         const isCorrect = processedTranscript.includes(currentLetter);
-        // const isCorrect = currentLetter === transcript;
 
         dispatch({ type: 'SET_AUDIO_URL', payload: { label: currentLetter, audioBlobUrl, isCorrect } });
 

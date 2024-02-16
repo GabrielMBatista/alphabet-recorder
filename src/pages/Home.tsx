@@ -9,7 +9,6 @@ import HeaderMenu from '../components/HeaderMenu';
 const Home: React.FC = () => {
   const { state } = useAppState();
   const [isRetryMenuOpen, setIsRetryMenuOpen] = useState(false);
-  console.log('state', state)
   // Verifica se todas as letras foram tentadas e corrigidas
   useEffect(() => {
     const allLettersAttempted = state.audioURLs.length === 1; // Assumindo 26 letras no alfabeto

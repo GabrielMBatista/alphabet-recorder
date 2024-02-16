@@ -29,7 +29,6 @@ const About: React.FC = () => {
     { name: 'BTS', audioSrc: BTS },
     { name: 'YMCA', audioSrc: YMCA },
   ];
-  console.log('state', state)
   useEffect(() => {
     const allFilled = abbreviationLines.every(abbr => userEntries[abbr.name]);
     setIsRetryMenuOpen(allFilled);
