@@ -9,6 +9,7 @@ html {
 
 .alphabet-recorder .letter-button {
   margin: 10px;
+  color: 112, 118, 118;
   font-size: 4rem;
   width: 8rem;
   height: 8rem;

@@ -30,13 +30,23 @@ const AlphabetRecorder = () => {
                     {line.map((letter) => {
                         const hasAudio = !!state.audioURLs.find(audioURL => audioURL.label === letter);
                         const buttonImage = hasAudio || playingLetter === letter ? ButtonOrange : ButtonYellow;
+                        const audioURLObject = state.audioURLs.find(audioURL => audioURL.label === letter);
+                        const isCorrect = String(audioURLObject?.isCorrect);
+                        const isChecked = state.pageData['pagina1']?.check ?? false;
+                        const colorMap: { [key: string]: string } = {
+                            true: '#00ff00',
+                            false: '#ff0000',
+                        };
 
                         return (
                             <CustomAudioPlayer key={letter} letter={letter} onAudioEnd={handleAudioEnd}>
                                 <button
                                     onClick={() => handleLetterClick(letter)}
                                     className=" letter-button m-2 p-2 text-lg bg-cover bg-center bg-no-repeat flex items-center justify-center cursor-pointer font-bold"
-                                    style={{ backgroundImage: `url(${buttonImage})` }}
+                                    style={{
+                                        backgroundImage: `url(${buttonImage})`,
+                                        color: `${isChecked ? colorMap[isCorrect] : '#707676'} `,
+                                    }}
                                     title={`Click to play ${letter}`}
                                 >
                                     {letter}
