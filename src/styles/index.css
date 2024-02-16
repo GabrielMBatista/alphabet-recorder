@@ -7,6 +7,21 @@ html {
   font-family: 'Inter', sans-serif;
 }
 
+.alphabet-recorder .letter-button {
+  margin: 10px;
+  font-size: 4rem;
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-bold: 700;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .flex-container {
   display: flex;
   background: linear-gradient(5deg, #34f1fe 5%, #39aacf 90%);
@@ -65,9 +80,7 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   width: 32%;
-  max-width: 50%;
   height: 38vh;
-  max-height: 50vh;
   top: var(--tip-top, 0px);
   left: var(--tip-left, 0px);
 }
@@ -82,6 +95,58 @@ html {
   justify-content: center;
   width: 99%;
 }
+
+.card-content {
+  color: white;
+  font-size: 2.4rem;
+  padding: 1rem;
+  width: 60%;
+  height: 50%;
+}
+
+.alphabet-container {
+  width: max-content;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.audio-recorder-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 640px;
+  margin: auto;
+}
+
+.record-btn {
+  width: 100px;
+  height: 90px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.record-btn.recording {
+  background-image: url('../assets/images/Button-mic-on.svg');
+}
+
+.record-btn:not(.recording) {
+  background-image: url('../assets/images/Button-mic.svg');
+}
+
+.volume-indicator {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 @media (max-width: 1400px) {
   .record-card-container {
@@ -119,18 +184,36 @@ html {
     padding: 1.1rem;
     width: 99%;
   }
+
+  .alphabet-recorder .letter-button {
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+  }
+
+  .card-content {
+    font-size: 1.5rem;
+    width: 60%;
+    height: 50%;
+  }
+
+  .volume-indicator {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1024px) {
   .flex-container {
     flex-direction: column;
   }
 
   .record-card-container {
-    position: static;
-    width: 100%;
-    height: auto;
-    transform: translateY(0);
+    width: 95%;
+    height: 50%;
+    transform: translateY(-1%) translateX(3%) !important;
   }
 
   .flex-container-svg {
@@ -149,14 +232,61 @@ html {
 
   .custom-tip {
     width: 400px;
-    height: auto;
-    top: var(--tip-top, 10px);
-    left: var(--tip-left, 10px);
-    transform: translateY(5%) translateX(-95%) !important;
+    max-width: 100%;
+    height: 360px;
+    max-height: 100vh;
+    padding: 1rem;
+    padding-top: 4rem;
+    transform: translateY(-8%) translateX(-94%) !important;
+  }
+
+  .alphabet-recorder .letter-button {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+  }
+
+  .flex-container-svg {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .audio-recorder-container {
+    flex-direction: row;
+  }
+
+  .record-btn {
+    width: 80px;
+    height: 70px;
+  }
+
+  .card-content {
+    font-size: 1.5rem;
+    width: 80%;
+    height: 40%;
+  }
+
+  .volume-indicator {
+    width: 60%;
   }
 }
 
 @media (max-width: 480px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .record-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    height: 50%;
+    transform: translateY(-20%) translateX(3%) !important;
+  }
+
   .text-instruction {
     font-size: 1.2rem;
   }
@@ -185,5 +315,36 @@ html {
     font-size: 1rem;
     padding: 1.1rem;
     width: 99%;
+  }
+
+  .alphabet-recorder .letter-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+
+  .flex-container-svg {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+  }
+
+  .audio-recorder-container {
+    flex-direction: row;
+  }
+
+  .record-btn {
+    width: 80px;
+    height: 70px;
+  }
+
+  .card-content {
+    font-size: 1.5rem;
+    width: 95%;
+    height: 40%;
+  }
+
+  .volume-indicator {
+    width: 40%;
   }
 }

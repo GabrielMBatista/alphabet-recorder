@@ -34,22 +34,20 @@ const Home: React.FC = () => {
         <HeaderMenu />
         <div className="flex flex-1 flex-container" >
           <div className="flex-container-svg" >
-            <div className="w-max p-4 flex justify-end"
+            <div className="alphabet-container"
             >
               <AlphabetRecorder />
             </div>
           </div>
           <div className="record-card-container">
-            <div className="text-white text-3xl pr-2 pt-2 flex flex-1 justify-center items-center w-[74%]">
-              <div className="space-y-2 pr-20 pt-2">
-                Click on the buttons on the side
-                <img src={ButtonYellow} alt="Button" className="inline-block h-10 w-10 align-middle mx-2" />
-                and listen to the letter in English, and repeat by recording your voice by clicking the button
-                <img src={ButtonMic} alt="Button" className="inline-block h-10 w-10 align-middle mx-2" />
-                below
-              </div>
+            <div className='card-content'>
+              Click on the buttons on the side
+              <img src={ButtonYellow} alt="Button" className="inline-block h-10 w-10 align-middle mx-2" />
+              and listen to the letter in English, and repeat by recording your voice by clicking the button
+              <img src={ButtonMic} alt="Button" className="inline-block h-10 w-10 align-middle " />
+              below
             </div>
-            <div className="w-5/6 h-3/6 flex items-start justify-start font-bold text-2xl  p-7">
+            <div className="flex items-start justify-start font-bold text-2xl mb-2">
               <AudioRecorder pageId={'pagina1'} letter={state.currentLetter} />
             </div>
           </div>

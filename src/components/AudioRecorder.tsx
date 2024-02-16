@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { ReactMic } from 'react-mic';
 import { ButtonMic, ButtonMicOn } from '../assets/images';
-import useCorrectAudio from '../hooks/useCorrectionAudio'; // Verifique o caminho
-import useSimpleAudioRecognition from '../hooks/useSimpleAudioRecognition'; // Verifique o caminho
+import useCorrectAudio from '../hooks/useCorrectionAudio';
+import useSimpleAudioRecognition from '../hooks/useSimpleAudioRecognition';
 import SvgComponent from './SvgComponent';
 
 interface AudioRecorderProps {
@@ -96,38 +96,19 @@ const AudioRecorder: React.FC<AudioRecorderProps> = ({ pageId, letter }) => {
     };
 
     return (
-        <div className={`w-4/6 h-50 flex flex-row items-center`}>
+        <div className="audio-recorder-container">
             <div hidden>
                 <ReactMic
                     record={isRecording}
                     onStop={onStop}
-                // noiseSuppression={true}
                 />
             </div>
             <button
                 onClick={toggleRecording}
-                className={`flex items-center justify-center cursor-pointer font-bold text-2xl`}
+                className={`record-btn ${isRecording ? 'recording' : ''}`}
                 title={`Click to record ${letter}`}
-                style={{
-                    backgroundImage: `url(${!isRecording ? ButtonMic : ButtonMicOn})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    width: '100px',
-                    height: '90px',
-                    color: '#004165',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                }}
             />
-            <div style={{
-                width: '55%',
-                height: '40%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-            }}>
+            <div className="volume-indicator">
                 <SvgComponent activeNumber={audioLevel} />
             </div>
         </div>
