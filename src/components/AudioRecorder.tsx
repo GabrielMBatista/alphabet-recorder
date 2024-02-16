@@ -55,7 +55,7 @@ const AudioRecorder: React.FC<AudioRecorderProps> = ({ pageId, letter }) => {
                             sum += x * x;
                         }
                         const rms = Math.sqrt(sum / bufferLength);
-                        const level = Math.min(12, Math.floor(rms * 100));
+                        const level = Math.min(20, Math.floor(rms * 100));
                         setAudioLevel(level);
                     }
                 }, 100);

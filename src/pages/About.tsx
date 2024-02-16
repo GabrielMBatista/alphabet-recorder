@@ -35,6 +35,11 @@ const About: React.FC = () => {
     setIsRetryMenuOpen(allFilled);
   }, [userEntries, abbreviationLines]);
 
+
+  const resetLocalState = () => {
+    setUserEntries({});
+    // Qualquer outro estado que precise ser limpo
+  };
   const handleInputChange = (abbreviation: string, value: string) => {
     const trimmedValue = value.trim();
     setUserEntries(prevEntries => ({
@@ -99,7 +104,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
-      <RetryMenu pageId={'pagina2'} handleCheckClick={handleCheckClick} isOpen={isRetryMenuOpen} setIsOpen={setIsRetryMenuOpen} />
+      <RetryMenu onReset={resetLocalState} pageId={'pagina2'} handleCheckClick={handleCheckClick} isOpen={isRetryMenuOpen} setIsOpen={setIsRetryMenuOpen} />
     </div>
   );
 };

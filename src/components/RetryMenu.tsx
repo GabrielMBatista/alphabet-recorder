@@ -8,10 +8,12 @@ interface RetryMenuProps {
     pageId: string;
     setIsOpen: (isOpen: boolean) => void;
     handleCheckClick?: () => void;
+    onReset?: () => void;
 }
 
-const RetryMenu: React.FC<RetryMenuProps> = ({ pageId, isOpen, setIsOpen, handleCheckClick }) => {
-    const { dispatch } = useAppState(); 
+
+const RetryMenu: React.FC<RetryMenuProps> = ({ pageId, isOpen, setIsOpen, handleCheckClick, onReset }) => {
+    const { dispatch } = useAppState();
 
     const handleTryAgain = () => {
         dispatch({ type: 'CLEAR_AUDIO_URLS' }); // Despacha a ação para zerar audioURLs
@@ -27,6 +29,7 @@ const RetryMenu: React.FC<RetryMenuProps> = ({ pageId, isOpen, setIsOpen, handle
             },
         });
         setIsOpen(false); // Fecha o menu
+        onReset && onReset();
     };
 
     const handleCheck = () => {

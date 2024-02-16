@@ -438,4 +438,86 @@ html {
   .volume-indicator {
     width: 40%;
   }
+
+  @media (max-width: 360px) {
+    .flex-container {
+      flex-direction: column;
+    }
+
+    .flex-container-svg {
+      order: -1;
+      width: 100%;
+      height: 55%;
+    }
+
+    .record-card-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 96%;
+      height: 55%;
+      transform: translateY(-5%) translateX(2%);
+    }
+
+    .text-instruction {
+      font-size: 1.2rem;
+    }
+
+    .icon {
+      height: 5vh;
+      width: 5vw;
+    }
+
+    .custom-tip {
+      width: 90%;
+      height: auto;
+    }
+
+    .custom-tip {
+      width: 350px;
+      height: 340px;
+      padding: 0.2rem;
+      padding-top: 2rem;
+      transform: translateY(-11%) translateX(-93%);
+    }
+
+    .custom-tip-content {
+      font-size: 1rem;
+      padding: 1.1rem;
+      width: 90%;
+    }
+
+    .alphabet-recorder .letter-button {
+      width: 2.3rem;
+      height: 2.3rem;
+      font-size: 1rem;
+    }
+
+    .flex-container-svg {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+    }
+
+    .audio-recorder-container {
+      flex-direction: row;
+    }
+
+    .record-btn {
+      width: 60px;
+      height: 50px;
+    }
+
+    .card-content {
+      font-size: 1.3rem;
+      width: 97%;
+      height: 35%;
+      padding: 0.3rem;
+    }
+
+    .volume-indicator {
+      width: 40%;
+    }
+  }
 }
