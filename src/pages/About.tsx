@@ -56,14 +56,9 @@ const About: React.FC = () => {
   return (
     <div className="h-screen w-screen max-w-full max-h-full ">
       <HeaderMenu />
-      <div className="flex flex-col h-full overflow-auto"
+      <div className="flex flex-col h-full overflow-auto bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: `url(${BackgroundAbbreviations})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          width: '100vw',
-          height: '90vh',
         }}>
         <div className="h-[6vh] text-white shadow-[5px_5px_8px_rgba(0,0,0,5)] rounded-bl-lg opacity-100" style={{ backgroundColor: 'rgb(255 255 255 / 50%)' }}>
           <h1 className="text-3xl text-red-600 text-center w-full items-center p-2">Listen and write some famous abbreviations</h1>

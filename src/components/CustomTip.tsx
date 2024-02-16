@@ -35,13 +35,11 @@ const CustomTip: React.FC<CustomTipProps> = ({ isOpen, type, buttonRef, setIsOpe
             if (isOpen && buttonRef.current) {
                 const buttonRect = buttonRef.current.getBoundingClientRect();
                 let newTop = buttonRect.bottom + window.scrollY - 10;
-                let newLeft = buttonRect.right + window.scrollX - 10;
-                let transformValues = `translateY(4%) translateX(-95%)`;
+                let newLeft = buttonRect.right + window.scrollX - 20;
 
                 setStyles({
                     top: `${newTop}px`,
                     left: `${newLeft}px`,
-                    transform: transformValues,
                 });
             }
         }
@@ -68,18 +66,15 @@ const CustomTip: React.FC<CustomTipProps> = ({ isOpen, type, buttonRef, setIsOpe
 
     return (
         <div className="custom-tip" style={styles}>
-            <div style={{ maxHeight: '100%', overflowY: 'auto' }}>
-                {Array.isArray(content) ? (
-                    content.map((item, index) => (
-                        <p key={index} className="custom-tip-content" style={{ height: '100%' }}>
-                            {item}
-                        </p>
-                    ))
-                ) : (
-                    <p className="custom-tip-content" style={{ height: '100%' }}>{content}</p>
-                )}
-            </div>
-
+            {Array.isArray(content) ? (
+                content.map((item, index) => (
+                    <p key={index} className="custom-tip-content">
+                        {item}
+                    </p>
+                ))
+            ) : (
+                <p className="custom-tip-content">{content}</p>
+            )}
         </div>
     );
 };
