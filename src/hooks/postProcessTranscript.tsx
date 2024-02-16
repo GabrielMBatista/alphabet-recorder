@@ -28,7 +28,7 @@ const postProcessTranscript = (transcript: string) => {
         'z': ['z', 'zee', 'zed', 'zeta']
     };
 
-    // Remove a frase "i said" do transcript, ignorando a capitalização
+    // Remove a frase "letter" do transcript, ignorando a capitalização
     const cleanedTranscript = transcript.replace(/letter\s+/gi, "").toLowerCase();
 
     // Dividir o transcript limpo em palavras

@@ -32,39 +32,26 @@ const Home: React.FC = () => {
       <RetryMenu pageId={'pagina1'} isOpen={isRetryMenuOpen} setIsOpen={setIsRetryMenuOpen} />
       <div className="flex flex-1 flex-col">
         <HeaderMenu />
-        <div className="flex flex-1  overflow-auto" style={{ background: 'linear-gradient(5deg, #34f1fe 5%, #39aacf 90%)' }}>
-          <div className="w-2/6 p-4 flex items-center" >
-            <div className="p-4" style={{
-              minHeight: '50vh',
-              minWidth: '60vw',
-              backgroundImage: `url(${RecordCard})`,
-              backgroundRepeat: 'no-repeat',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'space-around',
-            }}>
-              <div className="text-white text-3xl p-7 flex-1  w-2/3" style={{
-                flexGrow: 1,
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-              }}>
-                <div>
-                  Click on the buttons on the side <img src={ButtonYellow} alt="Button" style={{ height: '4vh', width: '4vw', display: 'inline-block', verticalAlign: 'middle', margin: '10px 0' }} /> and listen to the letter in English, and repeat by recording your voice by clicking the button <img src={ButtonMic} alt="Button" style={{ height: '4vh', width: '4vw', display: 'inline-block', verticalAlign: 'middle', margin: '10px 0' }} /> below
-                </div>
-              </div>
-              <div className="w-5/6 h-3/6 flex items-start justify-start font-bold text-2xl  p-7">
-                <AudioRecorder pageId={'pagina1'} letter={state.currentLetter} />
-              </div>
+        <div className="flex flex-1 flex-container" >
+          <div className="flex-container-svg" >
+            <div className="w-max p-4 flex justify-end"
+            >
+              <AlphabetRecorder />
             </div>
           </div>
-          <div className="w-4/6 p-4 flex justify-end" style={{
-            backgroundImage: `url(${BackgroundLetters})`,
-            backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
-          }}
-          >
-            <AlphabetRecorder />
+          <div className="record-card-container">
+            <div className="text-white text-3xl pr-2 pt-2 flex flex-1 justify-center items-center w-[74%]">
+              <div className="space-y-2 pr-20 pt-2">
+                Click on the buttons on the side
+                <img src={ButtonYellow} alt="Button" className="inline-block h-10 w-10 align-middle mx-2" />
+                and listen to the letter in English, and repeat by recording your voice by clicking the button
+                <img src={ButtonMic} alt="Button" className="inline-block h-10 w-10 align-middle mx-2" />
+                below
+              </div>
+            </div>
+            <div className="w-5/6 h-3/6 flex items-start justify-start font-bold text-2xl  p-7">
+              <AudioRecorder pageId={'pagina1'} letter={state.currentLetter} />
+            </div>
           </div>
         </div>
       </div>
