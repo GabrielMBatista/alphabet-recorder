@@ -52,7 +52,7 @@ const RetryMenu: React.FC<RetryMenuProps> = ({ pageId, isOpen, setIsOpen, handle
                     CHECK  <FiCheckCircle className="mr-2 ml-2 text-3xl" />
                 </div>
                 <div className="mb-3 w-full text-white py-2 px-4 flex items-center justify-end border-b border-white">
-                    <Link to="/about" className="hover:text-blue-200 cursor-pointer flex items-center justify-end">NEXT
+                    <Link to="/page2" className="hover:text-blue-200 cursor-pointer flex items-center justify-end">NEXT
                         <FiArrowRight className="mr-2 ml-2 text-3xl" />
                     </Link>
                 </div>

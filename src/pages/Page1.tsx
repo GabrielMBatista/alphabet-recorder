@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { BackgroundLetters, ButtonMic, ButtonYellow, RecordCard } from '../assets/images';
+import { ButtonMic, ButtonYellow } from '../assets/images';
 import AlphabetRecorder from '../components/AlphabetRecorder';
 import AudioRecorder from '../components/AudioRecorder';
 import { useAppState } from '../contexts/AppStateContext';
 import RetryMenu from '../components/RetryMenu';
 import HeaderMenu from '../components/HeaderMenu';
 
-const Home: React.FC = () => {
+const Page1: React.FC = () => {
   const { state } = useAppState();
   const [isRetryMenuOpen, setIsRetryMenuOpen] = useState(false);
   // Verifica se todas as letras foram tentadas e corrigidas
@@ -56,4 +56,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Page1;

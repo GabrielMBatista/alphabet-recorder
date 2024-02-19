@@ -18,7 +18,7 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
                     <Link to="/" className="hover:text-blue-200">Tela 1</Link>
                 </li>
                 <li>
-                    <Link to="/about" className="hover:text-blue-200">Tela 2</Link>
+                    <Link to="/page2" className="hover:text-blue-200">Tela 2</Link>
                 </li>
             </ul>
         </div>

@@ -116,14 +116,22 @@ function reducer(state: AppState, action: AppStateAction): AppState {
                 ...state,
                 currentScore: Number(state.currentScore) + action.payload,
             };
-        case 'SET_PAGE_DATA':
-            return {
-                ...state,
-                pageData: {
-                    ...state.pageData,
-                    [action.payload.pageId]: action.payload.data,
+        case 'SET_PAGE_DATA': {
+            const { pageId, data } = action.payload;
+            const currentPageData = state.pageData[pageId] || {};
+            const updatedPageData = {
+                ...state.pageData,
+                [pageId]: {
+                    ...currentPageData,
+                    ...data,
                 },
             };
+
+            return {
+                ...state,
+                pageData: updatedPageData,
+            };
+        };
         case 'RESET_PAGE_DATA':
             const resetPageData = { ...state.pageData };
             if (resetPageData[action.payload.pageId]) {

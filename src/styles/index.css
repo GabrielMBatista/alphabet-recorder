@@ -237,6 +237,75 @@ html {
   justify-content: center;
 }
 
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../assets/images/background-abbreviations.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+.page-title {
+  width: 100vw;
+  text-align: center;
+  color: #ff0000;
+  font-size: 2.5vh;
+  background: white;
+  opacity: 60%;
+  border-block-end: solid white 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.abbreviation-grid-container {
+  width: 65vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30vw, 1fr));
+  row-gap: 1vh;
+  column-gap: 20px;
+  padding: 0vh 3vh 1vh 3vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.abbreviation-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 30px;
+}
+
+.abbreviation-input {
+  margin-top: 1vh;
+  font-size: 2vw;
+  padding: 1vh;
+  width: 65%;
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.7);
+}
+
+.audio-player-button {
+  width: 7vw;
+  height: 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../assets/images/button-orange.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.audio-icon-button {
+  font-size: 48px
+}
 
 @media (max-width: 1400px) {
   .record-card-container {
@@ -291,6 +360,14 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .audio-icon-button {
+    font-size: 36px;
+  }
+
+  .abbreviation-input {
+    font-size: 2.5rem;
   }
 }
 
@@ -362,6 +439,14 @@ html {
 
   .volume-indicator {
     width: 80%;
+  }
+
+  .audio-icon-button {
+    font-size: 24px
+  }
+
+  .abbreviation-input {
+    font-size: 2.5rem;
   }
 }
 
@@ -439,7 +524,22 @@ html {
     width: 40%;
   }
 
+  .abbreviation-grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(40vw, 1fr));
+  }
 
+  .audio-player-button {
+    width: 15vw;
+    height: 15vw;
+  }
+
+  .audio-icon-button {
+    font-size: 20px
+  }
+
+  .abbreviation-input {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 360px) {
@@ -521,5 +621,14 @@ html {
 
   .volume-indicator {
     width: 40%;
+  }
+
+  .audio-icon-button {
+    font-size: 18px
+  }
+
+  .abbreviation-input {
+    font-size: 2rem;
+    width: 80%;
   }
 }

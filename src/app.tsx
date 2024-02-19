@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import AppRoutes from './routes/routes';
 
 import { AppStateProvider } from './contexts/AppStateContext';
+import ResultsPopup from './components/ResultsPopup';
 const App: React.FC = () => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
@@ -23,6 +24,7 @@ const App: React.FC = () => {
             </div>
             <Navbar isOpen={isNavbarOpen} setIsOpen={setIsNavbarOpen} />
             <AppRoutes />
+            <ResultsPopup />
           </div>
         </div>
       </Router>

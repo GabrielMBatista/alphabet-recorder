@@ -8,15 +8,21 @@ import { FaHeadphones } from "react-icons/fa6";
 import { BBC, BTS, CNN, DIY, DJ, HBO, MTV, USA, YMCA } from '../assets/sounds';
 import useCorrectText from '../hooks/useCorrectionText';
 
-const About: React.FC = () => {
+const Page2: React.FC = () => {
   const { state, dispatch } = useAppState();
   const [isRetryMenuOpen, setIsRetryMenuOpen] = useState(false);
   const [userEntries, setUserEntries] = useState<{ [key: string]: string }>({});
+  const [activeItem, setActiveItem] = useState<string>('');
   const { checkAnswers } = useCorrectText();
 
   const handleCheckClick = () => {
     checkAnswers();
   };
+
+  const handleAudioEnd = () => {
+    setActiveItem(''); // 
+  };
+
 
   const abbreviationLines = [
     { name: 'BBC', audioSrc: BBC },
@@ -64,48 +70,34 @@ const About: React.FC = () => {
         style={{
           backgroundImage: `url(${BackgroundAbbreviations})`,
         }}>
-        <div className="h-[6vh] text-white shadow-[5px_5px_8px_rgba(0,0,0,5)] rounded-bl-lg opacity-100" style={{ backgroundColor: 'rgb(255 255 255 / 50%)' }}>
-          <h1 className="text-3xl text-red-600 text-center w-full items-center p-2">Listen and write some famous abbreviations</h1>
-        </div>
-        <div className="w-full p-4 flex justify-center">
-          <div className="flex h-3/4 w-2/3 flex-col mt-8">
-            <div className="grid grid-cols-2 gap-2 w-full h-full max-w-1xl">
-              {abbreviationLines.map((abbr) => (
-                <div key={abbr.name} className="relative flex items-center justify-center cursor-pointer font-bold text-xl">
-                  <CustomAudioPlayer letter={abbr.name} audioSrc={abbr.audioSrc} onAudioEnd={() => { /* Função  */ }}>
-                    <button
-                      className="flex items-center justify-center cursor-pointer font-bold text-xl mx-4 mb-2 p-4"
-                      title={`Click to play ${abbr.name}`}
-                      style={{
-                        backgroundImage: `url(${ButtonRed})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat',
-                        width: '50px',
-                        height: '50px',
-                        color: '#004165',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                      }}
-                    >
-                      <FaHeadphones style={{ color: 'white', fontSize: '24px' }} />
-                    </button>
-                  </CustomAudioPlayer>
-                  <input
-                    className="h-[40px] w-1/3 text-3xl text-red-600 text-center border-b-2 shadow-[5px_5px_8px_rgba(0,0,0,5)] rounded-lg uppercase"
-                    value={userEntries[abbr.name] || ''}
-                    onChange={(e) => handleInputChange(abbr.name, e.target.value)}
-                  />
-                </div>
-              ))}
-            </div>
+        <div className="page-container">
+          <h1 className="page-title">Listen and write some famous abbreviations</h1>
+          <div className="abbreviation-grid-container">
+            {abbreviationLines.map((abbr) => (
+              <div key={abbr.name} className="abbreviation-item">
+                <CustomAudioPlayer
+                  letter={abbr.name}
+                  audioSrc={abbr.audioSrc}
+                  onAudioEnd={handleAudioEnd}
+                >
+                  <button className="audio-player-button" onClick={() => setActiveItem(abbr.name)}>
+                    <FaHeadphones className='audio-icon-button' color={activeItem === abbr.name ? "green" : "white"} />
+                  </button>
+                </CustomAudioPlayer>
+                <input
+                  className="abbreviation-input text-transform: uppercase rounded-lg"
+                  value={userEntries[abbr.name] || ''}
+                  onChange={(e) => handleInputChange(abbr.name, e.target.value)}
+                />
+              </div>
+            ))}
           </div>
         </div>
+
       </div>
       <RetryMenu onReset={resetLocalState} pageId={'pagina2'} handleCheckClick={handleCheckClick} isOpen={isRetryMenuOpen} setIsOpen={setIsRetryMenuOpen} />
     </div>
   );
 };
 
-export default About;
+export default Page2;
