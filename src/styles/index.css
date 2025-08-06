@@ -502,6 +502,12 @@ html {
     overflow-y: auto;
   }
 
+  .alphabet-recorder .letter-button {
+    width: var(--letter-button-width, 2.5rem);
+    height: var(--letter-button-height, 2.5rem);
+    font-size: var(--font-size-small, 1rem);
+  }
+
   .card-content {
     font-size: 0.9rem;
     padding: 0.7rem;
