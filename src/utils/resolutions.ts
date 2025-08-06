@@ -416,9 +416,9 @@ export const resolutions: Record<string, Resolution> = {
         ),
         createLetterMapping(["V", "W", "X", "Y", "Z"], "small", "tight"),
       ],
-      maxLettersPerRow: 7,
-      optimalLettersPerRow: 7,
-      containerAspectRatio: 4 / 3,
+      maxLettersPerRow: 8,
+      optimalLettersPerRow: 8,
+      containerAspectRatio: 16 / 9,
       adaptiveSpacing: true,
     },
     fontSize: {
