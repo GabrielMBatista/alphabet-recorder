@@ -399,22 +399,11 @@ export const resolutions: Record<string, Resolution> = {
     maxHeight: "100vh",
     alphabetMapping: {
       rows: [
-        createLetterMapping(
-          ["A", "B", "C", "D", "E", "F", "G"],
-          "large",
-          "normal"
-        ),
-        createLetterMapping(
-          ["H", "I", "J", "K", "L", "M", "N"],
-          "large",
-          "normal"
-        ),
-        createLetterMapping(
-          ["O", "P", "Q", "R", "S", "T", "U"],
-          "large",
-          "normal"
-        ),
-        createLetterMapping(["V", "W", "X", "Y", "Z"], "large", "loose"),
+        createLetterMapping(["A", "B", "C", "D", "E", "F"], "small", "tight"),
+        createLetterMapping(["G", "H", "I", "J", "K", "L"], "small", "tight"),
+        createLetterMapping(["M", "N", "O", "P", "Q", "R"], "small", "tight"),
+        createLetterMapping(["S", "T", "U", "V", "W", "X"], "small", "tight"),
+        createLetterMapping(["Y", "Z"], "small", "tight"),
       ],
       maxLettersPerRow: 7,
       optimalLettersPerRow: 7,

@@ -597,11 +597,11 @@ html {
   }
 
   .card-content {
-    font-size: 0.95rem;
-    padding: 0.3rem;
-    width: 90%;
-    height: 50%;
+    font-size: .95rem;
+    height: 70%;
     overflow: auto;
+    padding: .3rem;
+    width: 80%;
   }
 
   .volume-indicator {
@@ -713,7 +713,7 @@ html {
   .card-content {
     font-size: 0.9rem;
     width: 97%;
-    height: 35%;
+    height: 50%;
     padding: 0.3rem;
   }
 
@@ -729,11 +729,4 @@ html {
     font-size: 2rem;
     width: 80%;
   }
-}
-
-.alphabet-recorder {
-  width: 100%;
-  max-width: 700px;
-  min-width: 220px;
-  overflow-y: auto;
 }
