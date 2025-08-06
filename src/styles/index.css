@@ -503,9 +503,9 @@ html {
   }
 
   .alphabet-recorder .letter-button {
-    width: var(--letter-button-width, 2.5rem);
-    height: var(--letter-button-height, 2.5rem);
-    font-size: var(--font-size-small, 1rem);
+    width: var(--letter-button-width, 2.8rem);
+    height: var(--letter-button-height, 2.8rem);
+    font-size: var(--font-size-small, 1.5rem);
   }
 
   .card-content {
