@@ -400,21 +400,21 @@ export const resolutions: Record<string, Resolution> = {
     alphabetMapping: {
       rows: [
         createLetterMapping(
-          ["A", "B", "C", "D", "E", "F", "G"],
+          ["A", "B", "C", "D", "E", "F", "G", "H"], // 8 letras por linha
           "small",
           "tight"
         ),
         createLetterMapping(
-          ["H", "I", "J", "K", "L", "M", "N"],
+          ["I", "J", "K", "L", "M", "N", "O", "P"], // 8 letras por linha
           "small",
           "tight"
         ),
         createLetterMapping(
-          ["O", "P", "Q", "R", "S", "T", "U"],
+          ["Q", "R", "S", "T", "U", "V", "W", "X"], // 8 letras por linha
           "small",
           "tight"
         ),
-        createLetterMapping(["V", "W", "X", "Y", "Z"], "small", "tight"),
+        createLetterMapping(["Y", "Z"], "small", "tight"),
       ],
       maxLettersPerRow: 8,
       optimalLettersPerRow: 8,
@@ -422,33 +422,33 @@ export const resolutions: Record<string, Resolution> = {
       adaptiveSpacing: true,
     },
     fontSize: {
-      small: "1rem",
-      medium: "1.25rem",
-      large: "1.5rem",
-      xlarge: "1.75rem",
+      small: "0.9rem", // menor para caber mais letras
+      medium: "1.1rem",
+      large: "1.3rem",
+      xlarge: "1.5rem",
     },
     spacing: {
-      padding: "0.75rem",
-      margin: "0.375rem",
-      gap: "0.75rem",
+      padding: "0.5rem",
+      margin: "0.25rem",
+      gap: "0.5rem", // menor espaçamento
     },
     dimensions: {
       letterButton: {
-        width: "3.5rem",
-        height: "3.5rem",
-        minWidth: "3rem",
-        minHeight: "3rem",
+        width: "2.2rem", // reduzido
+        height: "2.2rem",
+        minWidth: "2rem",
+        minHeight: "2rem",
       },
       container: {
-        width: "60vw",
-        height: "70vh",
-        maxWidth: "600px",
+        width: "80vw", // mais largo
+        height: "60vh",
+        maxWidth: "800px", // aumente para caber 8 letras
         maxHeight: "500px",
       },
       card: {
         width: "50vw",
         height: "55vh",
-        padding: "1.25rem",
+        padding: "1rem",
       },
       modal: {
         width: "65vw",
