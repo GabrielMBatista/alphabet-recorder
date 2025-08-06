@@ -243,13 +243,13 @@ html {
   max-width: 700px;
   min-width: 220px;
   margin: 0 auto;
-  padding: 1rem 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   max-height: 60vh;
   object-fit: contain;
+  overflow: hidden;
   z-index: 4;
 }
 
@@ -471,17 +471,19 @@ html {
 
 @media (max-width: 1024px) {
   .flex-container {
-    flex-direction: column;
-    align-items: center;
-    min-height: 70vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40% 60%;
+    gap: 1rem;
+     justify-items: center; 
+    align-items: center;   
   }
-
   .flex-container-svg {
     width: 100%;
     max-width: 100vw;
     min-width: 0;
     margin-left: 0;
-    padding: 1rem 0;
+    padding: 0rem 0;
   }
 
   .record-card-container {
