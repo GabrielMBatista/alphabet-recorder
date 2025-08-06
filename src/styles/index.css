@@ -220,14 +220,14 @@ html {
 .custom-tip-content {
   color: white;
   border-bottom: solid white 2px;
-  font-size: 1.5rem;
+  font-size: 0.9rem;
   padding: 1.1rem;
   width: 95%;
 }
 
 .card-content {
   color: white;
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 0.5rem;
   max-width: 95vw;
   min-width: 100px;
@@ -411,7 +411,7 @@ html {
   }
 
   .card-content {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     width: 60%;
     height: 50%;
   }
@@ -456,7 +456,7 @@ html {
   }
 
   .card-content {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     width: 80%;
   }
 
@@ -503,7 +503,7 @@ html {
   }
 
   .card-content {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     padding: 0.7rem;
     max-width: 98vw;
     min-width: 140px;
@@ -711,7 +711,7 @@ html {
   }
 
   .card-content {
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     width: 97%;
     height: 35%;
     padding: 0.3rem;
